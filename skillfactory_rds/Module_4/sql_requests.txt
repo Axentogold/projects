@@ -217,7 +217,7 @@ LIMIT 1
 
 ТАблица для анализа нерентабильных рейсов Анапы зимой 2017 г.
 
-  WITH main_table       AS -- вылеты из Анапы (зима 2017)
+WITH main_table       AS -- вылеты из Анапы (зима 2017)
            (SELECT f.flight_id,
                    f.flight_no,
                    f.arrival_airport,
@@ -234,7 +234,6 @@ LIMIT 1
        count_seats      AS -- таблица с кол-вом мест в каждом классе
            (SELECT s.aircraft_code,
                    count(CASE WHEN s.fare_conditions = 'Economy' THEN s.fare_conditions END)  AS seat_economy,
-                   count(CASE WHEN s.fare_conditions = 'Comfort' THEN s.fare_conditions END)  AS seat_comfort,
                    count(CASE WHEN s.fare_conditions = 'Business' THEN s.fare_conditions END) AS seat_bisiness,
                    count(*)                                                                   AS seat_total
               FROM dst_project.seats AS s
@@ -243,11 +242,9 @@ LIMIT 1
        sold_tickets     AS -- таблица проданных билетов
            (SELECT tf.flight_id,
                    count(CASE WHEN tf.fare_conditions = 'Economy' THEN tf.fare_conditions END)  AS sold_economy,
-                   count(CASE WHEN tf.fare_conditions = 'Comfort' THEN tf.fare_conditions END)  AS sold_comfort,
                    count(CASE WHEN tf.fare_conditions = 'Business' THEN tf.fare_conditions END) AS sold_bisiness,
                    count(*)                                                                     AS sold_total,
                    sum(CASE WHEN tf.fare_conditions = 'Economy' THEN tf.amount END)             AS amount_economy,
-                   sum(CASE WHEN tf.fare_conditions = 'Comfort' THEN tf.amount END)             AS amount_comfort,
                    sum(CASE WHEN tf.fare_conditions = 'Business' THEN tf.amount END)            AS amount_bisiness,
                    sum(tf.amount)                                                               AS amount_total
               FROM dst_project.ticket_flights AS tf
