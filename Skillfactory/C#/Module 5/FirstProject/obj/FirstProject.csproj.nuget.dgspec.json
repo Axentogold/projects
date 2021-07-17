@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Хозяин\\source\\Rep\\Skillfactory\\C#\\Module 5\\Project\\Project\\Project.csproj": {}
+    "C:\\Users\\Хозяин\\source\\repos\\FirstProject\\FirstProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Хозяин\\source\\Rep\\Skillfactory\\C#\\Module 5\\Project\\Project\\Project.csproj": {
+    "C:\\Users\\Хозяин\\source\\repos\\FirstProject\\FirstProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Хозяин\\source\\Rep\\Skillfactory\\C#\\Module 5\\Project\\Project\\Project.csproj",
-        "projectName": "Project",
-        "projectPath": "C:\\Users\\Хозяин\\source\\Rep\\Skillfactory\\C#\\Module 5\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "C:\\Users\\Хозяин\\source\\repos\\FirstProject\\FirstProject.csproj",
+        "projectName": "FirstProject",
+        "projectPath": "C:\\Users\\Хозяин\\source\\repos\\FirstProject\\FirstProject.csproj",
         "packagesPath": "C:\\Users\\Хозяин\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Хозяин\\source\\Rep\\Skillfactory\\C#\\Module 5\\Project\\Project\\obj\\",
+        "outputPath": "C:\\Users\\Хозяин\\source\\repos\\FirstProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Хозяин\\AppData\\Roaming\\NuGet\\NuGet.Config",

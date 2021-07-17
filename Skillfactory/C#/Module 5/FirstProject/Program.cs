@@ -40,9 +40,9 @@ namespace Project
 
             {
                 if (User.isPet)
-                {
+
                     Console.WriteLine("Количество ваших питомцев: {0}", User.quantityPet);
-                }
+
                 else
                     Console.WriteLine("У вас нет питомцев");
 
