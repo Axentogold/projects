@@ -5,6 +5,7 @@ namespace Project
     class Program
     {
         static string[] CreateUserPets(int pets)
+        
         {
             var userPets = new string[pets];
 
@@ -15,7 +16,7 @@ namespace Project
             }
 
             return userPets;
-        }
+        } // заполнение массива питомцев
 
         static string[] CreateUserColors(int colors)
         {
@@ -28,7 +29,7 @@ namespace Project
             }
 
             return userColors;
-        }
+        } // заполнение массива любимых цветов
 
         static void GetTuple((string name, string lastName, int age, bool isPet, int quantityPet, string[] pets, bool isColor, int quantityColors, string[] colors) user)
         {
@@ -71,9 +72,9 @@ namespace Project
                     }
                 
             }
-        }
+        } // Вывод данных о пользователе
 
-        static int CheckNumber()
+        static int CheckNumber() // метод проверяет, чтобы пользователь вводил значения больше 0 и не принимает отрицательные значения
         {
             int value = 0;
             bool boolNumber = true;
@@ -99,7 +100,8 @@ namespace Project
             return value;
         }
 
-        static (string name, string lastName, int age, bool isPet, int quantityPet, string[] pets, bool isColor, int quantityColors, string[] colors) newUser()
+        static (string name, string lastName, int age, bool isPet, int quantityPet, string[] pets, bool isColor, int quantityColors, string[] colors) newUser() //ввод значений для нового пользователя          
+
         {
             (string name, string lastName, int age, bool isPet, int quantityPet, string[] pets, bool isColor, int quantityColors, string[] colors) user;
 
@@ -148,11 +150,10 @@ namespace Project
                 }
             }
 
-            //return (user.Name, User.lastName, User.age, User.isPet, User.quantityPet, User.pets, User.isColor, User.quantityColors, User.colors);
             return (user);
         }
 
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
             var User1 = newUser();
 
