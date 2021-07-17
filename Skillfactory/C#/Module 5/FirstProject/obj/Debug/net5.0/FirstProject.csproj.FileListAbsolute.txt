@@ -1,0 +1,16 @@
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\bin\Debug\net5.0\FirstProject.exe
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\bin\Debug\net5.0\FirstProject.deps.json
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\bin\Debug\net5.0\FirstProject.runtimeconfig.json
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\bin\Debug\net5.0\FirstProject.runtimeconfig.dev.json
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\bin\Debug\net5.0\FirstProject.dll
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\bin\Debug\net5.0\ref\FirstProject.dll
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\bin\Debug\net5.0\FirstProject.pdb
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\obj\Debug\net5.0\FirstProject.csproj.AssemblyReference.cache
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\obj\Debug\net5.0\FirstProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\obj\Debug\net5.0\FirstProject.AssemblyInfoInputs.cache
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\obj\Debug\net5.0\FirstProject.AssemblyInfo.cs
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\obj\Debug\net5.0\FirstProject.csproj.CoreCompileInputs.cache
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\obj\Debug\net5.0\FirstProject.dll
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\obj\Debug\net5.0\ref\FirstProject.dll
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\obj\Debug\net5.0\FirstProject.pdb
+C:\Users\Хозяин\source\Rep\Skillfactory\C#\Module 5\FirstProject\obj\Debug\net5.0\FirstProject.genruntimeconfig.cache

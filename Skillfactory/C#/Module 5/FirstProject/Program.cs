@@ -4,11 +4,11 @@ namespace Project
 {
     class Program
     {
-        static string[] CreateUserPets(int value)
+        static string[] CreateUserPets(int pets)
         {
-            string[] userPets = new string[value];
+            var userPets = new string[pets];
 
-            for (int i = 0; i < value; i++)
+            for (int i = 0; i < pets; i++)
             {
                 Console.Write("\tВведите кличку питомца {0}: ", i + 1);
                 userPets[i] = Console.ReadLine();
@@ -17,11 +17,11 @@ namespace Project
             return userPets;
         }
 
-        static string[] CreateUserColors(int value)
+        static string[] CreateUserColors(int colors)
         {
-            string[] userColors = new string[value];
+            string[] userColors = new string[colors];
 
-            for (int i = 0; i < value; i++)
+            for (int i = 0; i < colors; i++)
             {
                 Console.Write("\tВведите любимый цвет номер {0}: ", i + 1);
                 userColors[i] = Console.ReadLine();
@@ -30,46 +30,46 @@ namespace Project
             return userColors;
         }
 
-        static void GetTuple((string Name, string lastName, int age, bool isPet, int quantityPet, string[] pets, bool isColor, int quantityColors, string[] colors) User)
+        static void GetTuple((string name, string lastName, int age, bool isPet, int quantityPet, string[] pets, bool isColor, int quantityColors, string[] colors) user)
         {
             Console.WriteLine("\n=== Вывод данных о пользователе ===");
 
-            Console.WriteLine("Ваше имя: {0} {1}", User.Name, User.lastName);
-            Console.WriteLine("Ваш возраст: {0}", User.age);
+            Console.WriteLine("Ваше имя: {0} {1}", user.name, user.lastName);
+            Console.WriteLine("Ваш возраст: {0}", user.age);
 
 
             {
-                if (User.isPet)
+                if (user.isPet)
 
-                    Console.WriteLine("Количество ваших питомцев: {0}", User.quantityPet);
+                    Console.WriteLine("Количество ваших питомцев: {0}", user.quantityPet);
 
                 else
                     Console.WriteLine("У вас нет питомцев");
 
-                if (User.quantityPet != 0)
-                {
-                    for (int i = 0; i < User.quantityPet; i++)
+                if (user.quantityPet != 0)
+                
+                    for (int i = 0; i < user.quantityPet; i++)
                     {
-                        Console.WriteLine("\tКличка питомца номер {0}: {1}", i + 1, User.pets[i]);
+                        Console.WriteLine("\tКличка питомца номер {0}: {1}", i + 1, user.pets[i]);
                     }
-                }
+                
             }
 
             {
-                if (User.isColor)
-                {
-                    Console.WriteLine("Количество любимых цветов: {0}", User.quantityColors);
-                }
+                if (user.isColor)
+                
+                    Console.WriteLine("Количество любимых цветов: {0}", user.quantityColors);
+                
                 else
                     Console.WriteLine("У вас нет любимых цветов");
 
-                if (User.quantityColors != 0)
-                {
-                    for (int i = 0; i < User.quantityColors; i++)
+                if (user.quantityColors != 0)
+                
+                    for (int i = 0; i < user.quantityColors; i++)
                     {
-                        Console.WriteLine("\tЛюбимый цвет номер {0}: {1}", i + 1, User.colors[i]);
+                        Console.WriteLine("\tЛюбимый цвет номер {0}: {1}", i + 1, user.colors[i]);
                     }
-                }
+                
             }
         }
 
@@ -99,61 +99,62 @@ namespace Project
             return value;
         }
 
-        static (string Name, string lastName, int age, bool isPet, int quantityPet, string[] pets, bool isColor, int quantityColors, string[] colors) NewUser()
+        static (string name, string lastName, int age, bool isPet, int quantityPet, string[] pets, bool isColor, int quantityColors, string[] colors) newUser()
         {
-            (string Name, string lastName, int age, bool isPet, int quantityPet, string[] pets, bool isColor, int quantityColors, string[] colors) User;
+            (string name, string lastName, int age, bool isPet, int quantityPet, string[] pets, bool isColor, int quantityColors, string[] colors) user;
 
             Console.Write("Введите свое имя: ");
-            User.Name = Console.ReadLine();
+            user.name = Console.ReadLine();
 
             Console.Write("Введите свою фамилию: ");
-            User.lastName = Console.ReadLine();
+            user.lastName = Console.ReadLine();
 
             Console.Write("Введите свой возраст: ");
-            User.age = CheckNumber();
+            user.age = CheckNumber();
 
             Console.Write("Есть ли у вас питомец? (Да или Нет): ");
-            User.isPet = Console.ReadLine().ToLower() == "да";
+            user.isPet = Console.ReadLine().ToLower() == "да";
 
             {
-                if (User.isPet)
+                if (user.isPet)
                 {
                     Console.Write("Введите количество питомцев: ");
-                    User.quantityPet = CheckNumber();
+                    user.quantityPet = CheckNumber();
 
-                    User.pets = CreateUserPets(User.quantityPet);
+                    user.pets = CreateUserPets(user.quantityPet);
                 }
                 else
                 {
-                    User.pets = null;
-                    User.quantityPet = 0;
+                    user.pets = null;
+                    user.quantityPet = 0;
                 }
             }
 
             Console.Write("Есть ли у вас любимый цвет? (Да или Нет): ");
-            User.isColor = Console.ReadLine().ToLower() == "да";
+            user.isColor = Console.ReadLine().ToLower() == "да";
 
             {
-                if (User.isColor)
+                if (user.isColor)
                 {
                     Console.Write("Введите количество любимых цветов: ");
-                    User.quantityColors = CheckNumber();
+                    user.quantityColors = CheckNumber();
 
-                    User.colors = CreateUserColors(User.quantityColors);
+                    user.colors = CreateUserColors(user.quantityColors);
                 }
                 else
                 {
-                    User.colors = null;
-                    User.quantityColors = 0;
+                    user.colors = null;
+                    user.quantityColors = 0;
                 }
             }
 
-            return (User.Name, User.lastName, User.age, User.isPet, User.quantityPet, User.pets, User.isColor, User.quantityColors, User.colors);
+            //return (user.Name, User.lastName, User.age, User.isPet, User.quantityPet, User.pets, User.isColor, User.quantityColors, User.colors);
+            return (user);
         }
 
         static void Main(string[] args)
         {
-            var User1 = NewUser();
+            var User1 = newUser();
 
             GetTuple(User1);
 
